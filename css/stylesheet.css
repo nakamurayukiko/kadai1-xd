@@ -40,25 +40,22 @@ header h1:hover {
 }
 
 
-header ul {
+.header-nav .nav-list {
   width: 447px; 
   height: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-header li {
+.header-nav .nav-list .nav-item {
   font-size: 15px;
 }
 
-header li:hover {
+.header-nav .nav-list .nav-item:hover {
   border-bottom: 1px solid #707070; 
 
 }
 
-.menu-bar {
-  display:none;
-}
 
 .head-wrapper {
   

@@ -17,14 +17,89 @@
     font-size: 30px; 
   }
  
-  header ul {
-    display: none;
-  }
  
-  .menu-bar {
-    display: block;
+ 
+  .burger-btn{
+    display: block;      
+    width: 39px;      
+    height: 39px;      
+    position: relative;      
+    z-index: 3;
+    border:none;   
+  }  
+
+  .burger-btn:hover{
+    cursor: pointer;
   }
 
+  .bar{      
+    width: 20px;      
+    height: 1px;        
+    display: block;      
+    position: absolute;      
+    left: 50%;      
+    transform: translateX(-50%);      
+    background-color: #1B1310;    
+  }    
+  .bar_top{   
+    top: 10px;
+  }
+  .bar_mid{    
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+    bottom: 10px;
+  }
+
+  
+  .burger-btn.close .bar_top{     
+    background-color: #fff;  
+    transform: translate(-50%,10px) rotate(45deg);      
+    transition: transform .3s;  
+   
+  }    
+  .burger-btn.close .bar_mid{      
+    opacity: 0;       
+    transition: opacity .3s;    
+  }    
+  .burger-btn.close .bar_bottom{  
+  background-color: #fff;    
+  transform: translate(-50%,-8px) rotate(-45deg);      
+  transition: transform .3s;    
+  }
+
+  .nav-wrapper{      
+    
+    display:none;     
+    width: 100vw;      
+    height: 100vh;      
+    position: fixed;      
+    top: 0;      
+    left: 0;       
+    z-index: 2;     
+  }     
+  .header-nav{        
+    width: 100%;        
+    height: 100%;        
+    background-color:#1B1310;        
+    z-index: 2;      
+  }     
+  .header-nav .nav-list{     
+    flex-direction: column;      
+    position: absolute;        
+    top: 20%;        
+    left: 50%;        
+    transform: translate(-50%,-50%);        
+    text-align: center;      
+  }      
+  .header-nav .nav-list .nav-item{  
+    display: inline-block;
+        
+    margin-right: 0;        
+    margin-bottom: 0px;  
+    padding-bottom: 40px;    
+  }
   
   
   .head-wrapper {
@@ -245,5 +320,9 @@
 
   .text-wrapper3-responsive {
     display: block;
+  }
+
+  body.noscroll{
+    overflow: hidden;
   }
 }
